@@ -42,42 +42,26 @@ CREATE TABLE `article` (
 -- ----------------------------
 -- Records of article
 -- ----------------------------
-INSERT INTO `article` VALUES ('1', 'php10_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '1', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('2', 'php10_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('3', 'php10_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('4', 'php10_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('5', 'php10_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('7', 'php10_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('39', 'php10_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('40', 'php10_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('42', 'php10_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('38', 'php10_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('36', 'php10_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('37', 'php10_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('44', 'php10_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('45', 'php10_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('46', 'php10_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('47', 'php10_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('48', 'php10_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('50', 'php10_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('52', 'php10_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('53', 'php10_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('54', 'php10_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('55', 'php10_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('56', 'php10_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('58', 'php10_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('59', 'php10_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('60', 'php10_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('63', 'php10_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('64', 'php10_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('65', 'php10_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('66', 'php10_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('68', 'php10_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('69', 'php10_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('70', 'php10_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('71', 'php10_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('72', 'php10_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
-INSERT INTO `article` VALUES ('74', 'php10_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('1', 'test_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '1', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('2', 'test_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('3', 'test_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('4', 'test_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('5', 'test_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('7', 'test_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('39', 'test_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('40', 'test_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('42', 'test_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('38', 'test_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('63', 'test_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('64', 'test_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('65', 'test_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('66', 'test_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('68', 'test_1', '', 'php10_1k', 'php10_1d', '匿名者', '1', '0', '0', '0', '0', 'php10_1c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('69', 'test_2', '', 'php10_2k', 'php10_2d', '匿名者', '1', '0', '0', '0', '1', 'php10_2c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('70', 'test_3', '', 'php10_3k', 'php10_3d', '匿名者', '1', '0', '0', '0', '0', 'php10_3c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('71', 'test_4', '', 'php10_4k', 'php10_4d', '匿名者', '1', '0', '0', '0', '0', 'php10_4c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('72', 'test_5', '', 'php10_5k', 'php10_5d', '匿名者', '2', '0', '0', '0', '0', 'php10_5c', '1493190120', '1493190120', '1', null);
+INSERT INTO `article` VALUES ('74', 'test_7', '', 'php10_7k', 'php10_7d', '匿名者', '4', '0', '0', '0', '0', 'php10_7c', '1493190120', '1493190120', '1', null);
 
 -- ----------------------------
 -- Table structure for `category`
