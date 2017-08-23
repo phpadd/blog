@@ -1,0 +1,136 @@
+{include file="../Commen/head.html"}
+
+		<div id="divMain">
+{foreach $articleList as $article}
+<div class="post multi">
+	<h4 class="post-date">{$article.updated_time|date_format:'Y-m-d H:i:s'}</h4>
+	<h2 class="post-title">
+		<a href="index.php?p=home&c=article&a=detail&id={$article.id}" target="_blank">{$article.title}</a>
+	</h2>
+	<div class="post-body">
+		{$article.description}
+	</div>
+	<h5 class="post-tags">
+		{$article.keywords}
+	</h5>
+	<h6 class="post-footer">
+		作者:{$article.author}
+		 | 分类:{$article.categoryName}
+		 | 阅读:{$article.read_count}
+		 | 赞:{$article.praise_count}
+		 | 评论:{$article.comment_count}</h6>
+</div>
+{/foreach}
+<div class="pagebar" >
+{$pageshow}
+<!--   	<span>当前一共有3条记录，当前每页显示8条记录，当前是第1页！</span>&nbsp;&nbsp;		<a href="index.php?module=Index&action=index&page=1">首页</a>&nbsp;&nbsp;
+		<a href="index.php?module=Index&action=index&page=1">上一页</a>&nbsp;&nbsp;
+		<a href="index.php?module=Index&action=index&page=1">下一页</a>&nbsp;&nbsp;
+		<a href="index.php?module=Index&action=index&page=1">末页</a>&nbsp;&nbsp;<a href='index.php?module=Index&action=index&page=1'>1</a>&nbsp;&nbsp;<select onChange="location.href='index.php?module=Index&action=index&page=' + this.value;"><option value='1' selected='selected'>1</option></select>&nbsp;&nbsp;		<form method="GET" action="index.php" style="display:inline">
+			<input type="hidden" name="module" value="Index"/>
+			<input type="hidden" name="action" value="index"/>
+
+			<input type="text" id="page" name="page" value="1"  style="width:20px" onFocus="input_focus(this)" onBlur="input_blur(this)"/>
+			<input type="submit" value="提交"/>
+		</form>
+		<script>
+			function input_focus(e){
+				if(e.value == e.defaultValue) e.value = '';
+			}
+
+			function input_blur(e){
+				if(e.value == '') e.value = e.defaultValue;
+			}
+		</script> -->
+  </div>
+		</div>
+
+<div id="divSidebar">
+
+	<dl class="function" id="divSearchPanel">
+		<dt class="function_t">文章标题搜索</dt><dd class="function_c">
+
+		<div>
+			<form name="search" method="get" action="index.php?p=home&c=article&a=search">
+				<input type="hidden" name="p" value="home">
+				<input type="hidden" name="c" value="article">
+				<input type="hidden" name="a" value="search">
+				<input type="text" name="keyword" size="11" value=""/>
+				<input type="submit" value="搜索" />
+			</form>
+		</div>
+
+
+	</dd>
+	</dl>
+	<dl class="function" id="divCalendar">
+		<dt style="display:none;"></dt><dd class="function_c">
+
+		<div></div>
+
+
+	</dd>
+	</dl>
+	<dl class="function" id="divCatalog">
+		<dt class="function_t">文章分类</dt><dd class="function_c">
+		<ul>
+			{foreach $categoryList as $category}
+			<li >
+				{str_repeat('&nbsp;', $category.level*8)}
+				<a href="index.php?p=home&c=article&a=list&cid={$category.id}" target="_blank">{$category.name}</a>
+			</li>
+			{/foreach}
+		</ul>
+
+	</dd>
+	</dl>
+	<dl class="function" id="divComments">
+		<dt class="function_t">最新留言</dt><dd class="function_c">
+
+
+		<ul></ul>
+
+	</dd>
+	</dl>
+	<dl class="function" id="divArchives">
+		<dt class="function_t">文章归档</dt><dd class="function_c">
+
+
+		<ul></ul>
+
+	</dd>
+	</dl>
+	<dl class="function" id="divFavorites">
+		<dt class="function_t">网站收藏</dt><dd class="function_c">
+
+
+		<ul><li><a href="" target="_blank">myblog社区</a></li><li><a href="" target="_blank">myblog应用中心</a></li></ul>
+
+	</dd>
+	</dl>
+	<dl class="function" id="divLinkage">
+		<dt class="function_t">友情链接</dt><dd class="function_c">
+
+
+		<ul><li><a href="" target="_blank" title="myblog开源博客系统">myblog官网</a></li></ul>
+
+	</dd>
+	</dl>
+	<dl class="function" id="divMisc">
+		<dt style="display:none;"></dt><dd class="function_c">
+
+
+		<ul><li><a href="" target="_blank"><img src="image/logo/myblog.gif" height="31" width="88" alt="myblog" /></a></li><li><a href="" target="_blank"><img src="image/logo/rss.png" height="31" width="88" alt="订阅本站的 RSS 2.0 新闻聚合" /></a></li></ul>
+
+	</dd>
+	</dl>		</div>
+		<div id="divBottom">
+        	<h3 id="BlogCopyRight">
+                                            	Copyright © 2008-2028 PHP150912 All Rights Reserved            </h3>
+			<h4 id="BlogPowerBy">Powered by <a href="" title="myblog" target="_blank">myblog V1.0 Release 20151116</a></h4>
+		</div><div class="clear"></div>
+	</div><div class="clear"></div>
+	</div><div class="clear"></div>
+</div>
+</body>
+</html>

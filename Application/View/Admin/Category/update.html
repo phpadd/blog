@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{$smarty.const.__PUBLIC__}admin/css/ch-ui.admin.css">
+    <link rel="stylesheet" href="{$smarty.const.__PUBLIC__}admin/font/css/font-awesome.min.css">
+    <style type="text/css">
+        .pid option { margin-bottom: 1px; }
+        #c_parent { background-color: #060;color: #fff; }
+        #c_self,.c_sons { background-color: #f00;color: #fff; }
+    </style>
+</head>
+<body onload="document.form.name.focus()">
+    <!--面包屑导航 开始-->
+    <div class="crumb_warp">
+        <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
+        <i class="fa fa-home"></i> <a href="index.php?p=admin&c=index&a=index">首页</a> &raquo; 修改分类
+    </div>
+    <!--面包屑导航 结束-->
+
+    <div class="result_wrap">
+        <form action="index.php?p=admin&c=category&a=update" method="post" name="form">
+            <input type="hidden" name="id" value="{$categoryInfo.id}">
+            <table class="add_tab">
+                <tbody>
+                    <tr>
+                        <th width="120"><i class="require">*</i>所属分类：</th>
+                        <td>
+                            <select name="pid" class="pid">
+                                <option value="0">==请选择==</option>
+                                {foreach $categoryList as $category}
+                                <option value="{$category.id}" {($category['id']==$categoryInfo['pid'])?'selected':''} id="{($category['id']==$categoryInfo['pid'])?'c_parent':''}{($category['id']==$categoryInfo['id'])?'c_self':''}" class='{($category['pid']==$categoryInfo['id'])?'c_sons':''}' title="{($category['id']==$categoryInfo['id'])?'不能选择自己作为所属分类':''}{($category['pid']==$categoryInfo['id'])?'不能选择自己的子级作为所属分类':''}">
+                                    {str_repeat('&nbsp;', $category.level*8)}
+                                    {$category.name}
+                                </option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require">*</i>分类名称：</th>
+                        <td>
+                            <input type="text" class="lg" name="name" value="{$categoryInfo.name}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>排序：</th>
+                        <td>
+                            <input type="text" name="sort" value="{$categoryInfo.sort}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input type="button" value="修改" onclick="confirm('确定修改吗？')?form.submit():''">
+                            <input type="button" class="back" onclick="confirm('取消本次修改，并返回分类列表吗？')?window.location.href='index.php?p=admin&c=category&a=list':''" value="返回">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        var c_parent = document.getElementById('c_parent');
+        var c_self = document.getElementById('c_self');
+        var c_sons = document.getElementsByClassName('c_sons');
+        c_self.onclick=function () {
+            alert('不能选择自己作为所属分类');
+            c_parent.selected = 'selected';
+        };
+        for (var i = 0; i < c_sons.length; i++) {
+            c_sons[i].onclick=function () {
+                alert('不能选择自己的子级作为所属分类');
+                c_parent.selected = 'selected';
+            }
+        }
+    </script>
+
+</body>
+</html>

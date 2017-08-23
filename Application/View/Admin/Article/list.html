@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{$smarty.const.__PUBLIC__}admin/css/ch-ui.admin.css">
+	<link rel="stylesheet" href="{$smarty.const.__PUBLIC__}admin/font/css/font-awesome.min.css">
+    <script type="text/javascript" src="{$smarty.const.__PUBLIC__}admin/js/jquery.js"></script>
+    <script type="text/javascript" src="{$smarty.const.__PUBLIC__}admin/js/ch-ui.admin.js"></script>
+</head>
+<body>
+    <!--面包屑导航 开始-->
+    <div class="crumb_warp">
+        <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
+        <i class="fa fa-home"></i> <a href="index.php?p=admin&c=index&a=index">首页</a> &raquo; 文章列表
+    </div>
+    <!--面包屑导航 结束-->
+
+	<!--结果页快捷搜索框 开始  独立开发
+	<div class="search_wrap">
+        <form action="" method="post">
+            <table class="search_tab">
+                <tr>
+                    <th width="78">选择分类:</th>
+                    <td>
+                        <select onchange="javascript:location.href=this.value;">
+                            <option value="">全部</option>
+                            <option value="http://www.baidu.com">百度</option>
+                            <option value="http://www.sina.com">新浪</option>
+                        </select>
+                    </td>
+                    <th width="70">关键字:</th>
+                    <td><input type="text" name="keywords" placeholder="关键字"></td>
+                    <td><input type="submit" name="sub" value="查询"></td>
+                </tr>
+            </table>
+        </form>
+    </div>-->
+    <!--结果页快捷搜索框 结束-->
+
+    <!--搜索结果页面 列表 开始-->
+    <form action="#" method="post">
+        <div class="result_wrap">
+            <!--快捷导航 开始 独立开发
+            <div class="result_content">
+                <div class="short_wrap">
+                    <a href="#"><i class="fa fa-plus"></i>新增文章</a>
+                    <a href="#"><i class="fa fa-recycle"></i>批量删除</a>
+                    <a href="#"><i class="fa fa-refresh"></i>更新排序</a>
+                </div>
+            </div>-->
+            <!--快捷导航 结束-->
+        </div>
+
+        <div class="result_wrap">
+            <div class="result_content">
+                <table class="list_tab">
+                    <tr>
+                        <!--
+                        <th class="tc" width="5%"><input type="checkbox" name=""></th>
+                        <th class="tc">排序</th>
+                        -->
+                        <th class="tc">ID</th>
+                        <th>缩略图</th>
+                        <th>标题</th>
+                        <th>所属分类</th>
+                        <th>是否显示</th>
+                        <th>点击</th>
+                        <th>发布人</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    {foreach $articleList as $article}
+                    <tr>
+                        <!--
+                        <td class="tc"><input type="checkbox" name="id[]" value="59"></td>
+                        <td class="tc">
+                            <input type="text" name="ord[]" value="0">
+                        </td>
+                        -->
+                        <td class="tc">{$article.id}</td>
+                        <td>
+                            {if $article.image}
+                            <img src="{$smarty.const.__UPLOAD__}{$article.image}" style="width: 6em;height: 5em;">
+                            {/if}
+                            <!--{($article.image=='') ? "" : "<img src={$smarty.const.__UPLOAD__}{$article.image} style='width: 6em;height: 5em;'>"}-->
+                        </td>
+                        <td>{$article.title}</td>
+                        {if $article.cid == 0}
+                            <td class="tc">/</td>
+                        {else}
+                        {foreach $categoryList as $category}
+                            {if $article.cid == $category.id}
+                                <td class="tc">{$category.name}</td>
+                            {/if}
+                        {/foreach}
+                        {/if}
+                        <td>
+                            {if $article['display'] eq 1}
+                            <span style="color: green">显示</span>
+                            {else}
+                            <span style="color: red">隐藏</span>
+                            {/if}
+                        </td>
+                        <td>{$article.read_count}</td>
+                        <td>{$article.author}</td>
+                        <td>{$article.updated_time|date_format:'Y-m-d H:i:s'}</td>
+                        <td>
+                            <a href="index.php?p=admin&c=article&a=update&id={$article.id}">修改</a>
+                            <a href="javascript:;" onclick="confirm('确定删除“【{$article.title}】及缩略图”吗？') ? window.location.href='index.php?p=admin&c=article&a=delete&id={$article.id}' : ''">删除</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                </table>
+
+                <div class="page_nav">
+                    <div>
+                        <a class="first" href="news_list.php?pageno=1">第一页</a>
+                        <a class="prev" href="news_list.php?pageno=$prevpage">上一页</a>
+                        <a class="num" href="news_list.php?pageno=6">6</a>
+                        <a class="num" href="news_list.php?pageno=7">7</a>
+                        <span class="current">$pageno</span>
+                        <a class="num" href="news_list.php?pageno=9">9</a>
+                        <a class="num" href="news_list.php?pageno=10">10</a>
+                        <a class="next" href="news_list.php?pageno=$nextpage">下一页</a>
+                        <a class="end" href="news_list.php?pageno=$pagenoTotal">最后一页</a>
+                        <span class="rows">$dataTotal 条记录</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!--搜索结果页面 列表 结束-->
+
+</body>
+</html>
