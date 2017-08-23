@@ -21,6 +21,10 @@ Linux（win） + Mysql + Nginx<br />
 语 言：PHP<br />
 PHP版本：5.5.38以下 <br />
 数据库：mysql<br />
-
-![](https://github.com/phpadd/wordpress-theme/blob/master/avatar/default.jpg)  
+##  示例
+![](https://github.com/phpadd/blog/blob/master/img/1.png)  
+![](https://github.com/phpadd/blog/blob/master/img/2.png)  
+![](https://github.com/phpadd/blog/blob/master/img/3.png)  
+![](https://github.com/phpadd/blog/blob/master/img/4.png)  
+![](https://github.com/phpadd/blog/blob/master/img/5.png)  
 
