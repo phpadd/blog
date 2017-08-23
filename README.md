@@ -1,7 +1,7 @@
 # blog
 轻量级的博客，采用的oop模式设计的,核心mvc思想,比较简洁，适合于喜欢简洁性的使用者<br />
 
-## 本博客核心采用mvc思想的是：<br />
+## 本博客核心采用mvc思想：<br />
 MVC 是一种使用 MVC（Model View Controller 模型-视图-控制器） <br />
 Model（模型）表示应用程序核心（比如数据库记录列表）。<br />
 View（视图）显示数据（数据库记录）。<br />
@@ -21,4 +21,6 @@ Linux（win） + Mysql + Nginx<br />
 语 言：PHP<br />
 PHP版本：5.5.38以下 <br />
 数据库：mysql<br />
+
+![](https://github.com/phpadd/wordpress-theme/blob/master/avatar/default.jpg)  
 
