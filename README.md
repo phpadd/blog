@@ -21,6 +21,11 @@ Linux（win） + Mysql + Nginx<br />
 语 言：PHP<br />
 PHP版本：5.5.38以下 <br />
 数据库：mysql<br />
+默认后台账号密码<br />
+admin 123456<br />
+地址<br />
+http://www.blog.com/index.php?p=admin&c=login&a=login
+
 ##  示例
 ![](https://github.com/phpadd/blog/blob/master/img/1.png)  
 ![](https://github.com/phpadd/blog/blob/master/img/2.png)  
